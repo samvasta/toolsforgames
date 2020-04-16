@@ -1,0 +1,32 @@
+{% extends "common/base.html" %}
+{% load crispy_forms_tags  %}
+{% load bulma_tags  %}
+
+{% block hero %}
+<div class="hero is-primary is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Join Today</h1>
+        </div>
+    </div>
+</div>
+{% endblock hero %}
+
+{% block content %}
+<div class="desktop columns">
+    <div class="column is-three-quarters is-offset-2">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                {{ form|bulma }}
+            </fieldset>
+            <div class="form-group has-margin-top-15">
+                <button class="button is-link" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <small class="is-small has-margin-top-15">
+        Already have an account? <a class="ml-2" href="{% url 'login' %}">Sign in</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}

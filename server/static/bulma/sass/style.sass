@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&family=Corben&family=Inter&family=Karla&family=Lora&family=Forum&display=swap')
+
+$family-display: "Forum"
+$family-body: "Lora"
+
+// 1. Import the initial variables
+@import "./node_modules/bulma/sass/utilities/initial-variables"
+@import "./node_modules/bulma/sass/utilities/functions"
+
+// Override initial variables
+$black          : #54494b;
+$black-bis      : #635757;
+$black-ter      : #716564;
+$grey-darker    : #807471;
+$grey-dark      : #8e837e;
+$grey           : #9c938c;
+$grey-light     : #aaa39b;
+$grey-lighter   : #b9b3aa;
+$grey-lightest  : #c7c4ba;
+$white-ter      : #d5d5ca;
+$white-bis      : #e3e6db;
+$white          : #f1f7ed;
+
+$family-sans-serif: "Inter", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-serif: "Averia Serif Libre" serif;
+$family-monospace: monospace;
+$family-primary: $family-body;
+$family-secondary: $family-display;
+
+// Override derived variables 
+
+$orange: #FB6107;
+$yellow: #EDC242;
+$green: #709255; //306B34 //606C38
+$turquoise: #91C7B1;
+$cyan: #58A4B0;
+$blue: #254E70;
+$purple: #8B548C;
+$red: #C03221;
+
+
+
+// Create custom colors
+$brown: #432818;
+$light-brown: #704E2E;
+
+$primary: #593a23;
+$primary-light: #968c7a;
+$primary-dark: #432818;
+
+
+$info: $purple;
+$link: $cyan;
+
+    
+.is-family-body
+  font-family: $family-body, $family-serif !important
+  
+
+.is-family-display
+  font-family: $family-display, $family-sans-serif !important
+
+// 6. Import the rest of Bulma
+@import "./node_modules/bulma/sass/utilities/derived-variables"
+@import "./node_modules/bulma/bulma"
+@import "./node_modules/bulma-helpers/bulma-helpers"
