@@ -4,6 +4,7 @@ from . import views
 
 table_list = views.TableViewSet.as_view({'get': 'list'})
 table_detail = views.TableViewSet.as_view({'get': 'retrieve'})
+table_roll = views.RollViewSet.as_view({'get': 'roll'})
 
 router = routers.DefaultRouter()
 router.register(r'tables', views.TableViewSet, basename='table')
@@ -14,5 +15,6 @@ router.register(r'tableresults', views.TableResultViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('tables/<int:table_id>/roll/', table_roll)
 ]

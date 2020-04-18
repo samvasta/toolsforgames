@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     #My Apps
     'common.apps.CommonConfig',
-    'api_table.apps.ApiTableConfig',
+    'api.apps.ApiConfig',
     'users.apps.UsersConfig',
 
     #3rd party apps
